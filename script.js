@@ -1,34 +1,28 @@
 
-const button = document.querySelector('.button-add-task');
-const input = document.querySelector('.input-task');
+const localStorage = "to-do-list"
 
-let minhaListaDeItens = []
-
-function adicionarNovaTarefa()
+function adicionarTarefa()
 {
-    minhaListaDeItens.push(input.value);
+    let input = document.querySelector(".input-task");
 
-    input.value = ''
-}
-
-function mostrarTarefas()
-{
-    let novaLi = ''
-    
-    minhaListaDeItens.forEach((tarefa, posicao) =>
-    { 
-        <li class="task">
-        <p>Casa</p>
-        <button class="button-cancelar" onclick="deletar()">x</button>
-        </li> 
+    if(!input.value)
+    {
+        alert("Digite algo para escrever na sua lista");
+    }
+    else
+    {
+        let values = JSON.parse(localStorage.getItem(localStorage) || "[]")
+        values.push({
+            name: input.value
+        })
+        localStorage.setItem(localStorage,JSON.stringify(values))
     }
 }
 
-ListaCompleta.innerHTML = novaLi
-
-function deletar()
+function mostraValues()
 {
-    console.log('deletar');
+    let values = JSON.parse(localStorage.getItem(localStorage) || "[]")
+    let lista = document.querySelector(".list-task")
+    lista.innerHTML = ''
 }
 
-button.addEventListener('click', adicionarNovaTarefa);

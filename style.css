@@ -29,6 +29,7 @@ body {
     border-radius: 5px;
     padding: 0 10px;
     border: none;
+    outline: none; /* tira a borda preta de quando clica no input */ 
 }
 
 .button-add-task {
@@ -39,11 +40,13 @@ body {
     border: none;
     background-color: #ddd;
     border-radius: 5px;
+    font-size: 13.5px;
+    transition: 250ms; /*demora 1.5s para funcionar o hover*/
 }
 
 .button-add-task:hover {
     background-color: #cbcbcb;
-    color: #000;
+    color: #171717;
     font-size: 14px;
 }
 
