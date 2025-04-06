@@ -21,13 +21,13 @@ body {
     justify-content: center;
 }
 
-.input-task {
+.input-tarefa {
     height: 45px;
     width: 60%;
     margin: 15px;
     margin-left: 18px;
     border-radius: 5px;
-    padding: 0 10px;
+    padding: 0 15px;
     border: none;
     outline: none; /* tira a borda preta de quando clica no input */ 
 }
@@ -40,17 +40,15 @@ body {
     border: none;
     background-color: #ddd;
     border-radius: 5px;
-    font-size: 13.5px;
-    transition: 250ms; /*demora 1.5s para funcionar o hover*/
+    font-size: 14px;
+    transition: 150ms; /*demora 1.5s para funcionar o hover*/
 }
 
 .button-add-task:hover {
-    background-color: #cbcbcb;
-    color: #171717;
-    font-size: 14px;
+    background-color: #84838386;
 }
 
-.list-task {
+.lista {
     width: 95%;
     list-style: none;
     margin-top: 15px;
@@ -66,6 +64,7 @@ body {
     background-color: #f2f2f2;
     box-shadow: 1px 4px 10px #59595946;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .button-cancelar {
